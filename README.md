@@ -21,7 +21,9 @@ The form is responsive to user input.  With some jQuery, users can now be alerte
 
 
 3. Shopping Cart
+
 Note that the shopping cart animation isn't from the link that was sent. I realized this after I made this and instead of deleting what I did, I left my version - it's not that bad either. A user can click on the shopping button and a modal will be opened where they can visualize the shopping cart. Further integration can be made to this shopping cart.
+
 
 =========
 
