@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- SEO purposes -->
+        <meta name="description" content="Lenn Pabs is a team of developers, designers, and intrapreneurs passionate about improve the Lenn community.">  
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <title>Lenn Pabs</title>
+        
+        <!-- Custom CSS -->
+        <style type="text/css">
+            
+            .underline-form{
+                border-bottom:1px solid #757582;
+            }
+            
+            input {
+                padding-right: 0;  
+                padding-left: 0;
+                margin-left:-10px;
+            }
+            
+            #form-container {
+                margin-top:70px;
+            }
+            
+            #form {
+                margin-top:50px;
+            }
+            
+            #submit-button {
+                background-color:black; 
+                border-radius:0; 
+                color:white;
+                margin-top:10px;
+            }
+            
+            #logo {
+                position:absolute;
+                right:0;
+                bottom:0;
+                margin:20px;
+                height:50px;
+            }
+            #logo:hover {
+                cursor: pointer;
+            }
+            
+        </style>
+        
+    </head>
+    <body>
+        
+        <!-- Menu bar -->
+        <nav class="navbar navbar-expand-md navbar-dark" style="background-color:#33414A">
+            
+            <div class="container">
+                
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">Lenn Pabs</a>
+                
+                <!-- toggle botton when menu is collapsed -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    
+                    <!-- menu items -->
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://anthonysportfolio.com/landing-page.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://anthonysportfolio.com/landing-page.html">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://anthonysportfolio.com/landing-page.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://anthonysportfolio.com/landing-page.html">Contact</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle btn btn-outline-secondary" href="http://anthonysportfolio.com/landing-page.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Categories
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="http://anthonysportfolio.com/landing-page.html">Category 1</a>
+                                <a class="dropdown-item" href="http://anthonysportfolio.com/landing-page.html">Category 2</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="http://anthonysportfolio.com/landing-page.html">Category 3</a>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                </div>
+                
+            </div>
+            
+        </nav>
+        
+        <!-- Body container -->
+        <div class="container" id="form-container">
+            <div class="row">
+                
+                <div class="col-md-2"></div>
+                
+                <div class="col-md-8">
+                    <!-- header-->
+                    <h1 class="text-center display-4" style="font-weight:500"><strong>Instantly reach us filling form below</strong></h1>
+                    
+                    <!-- alert when user submits -->
+                    <div id="alert"></div>
+                    
+                    <!-- form container -->
+                    <form id="form">
+                        
+                        <!-- form elements -->
+                        <div class="row">
+                            <div class="col-lg-6">
+                                
+                                <div class="form-group row">
+                                    <label for="name" class="col-form-label col-sm-7 text-right"><small>Hi there, my name is</small></label>
+                                    <div class="col-sm-5">
+                                        <input type="text" class="form-control-plaintext text-center underline-form small" id="name" placeholder="how people call you">
+                                    </div> 
+                                </div>
+                                
+                                <div class="form-group row">
+                                    <label for="email" class="col-form-label col-sm-7 text-right"><small>You can reach me via email at</small></label>
+                                    <div class="col-sm-5">
+                                        <input type="text" class="form-control-plaintext text-center underline-form small" id="email" placeholder="the real one">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group row">
+                                    <label for="money" class="col-form-label col-sm-7 text-right"><small>My ballpark for this project</small></label>
+                                    <div class="col-sm-5">
+                                        <input type="number" class="form-control-plaintext text-center underline-form small" id="money" placeholder="$$$$$" step="10">
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="col-lg-6">
+                                
+                                <div class="form-group row">
+                                    <label for="problem" class="col-form-label text-left"><small>I want to speak about</small></label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control-plaintext text-center underline-form small" id="problem" placeholder="What's the problem">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group row">
+                                    <label for="alternative" class="col-form-label text-left"><small>on</small></label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control-plaintext text-center underline-form small" id="alternative" placeholder="skype, phone, codename">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group row">
+                                    <label class="col-form-label text-left"><small>US Dollars</small></label>
+                                    <div class="col-sm-6"></div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                        <!-- submit button -->
+                        <div class=".flex-row justify-content-center d-flex">
+                            <input type="submit" class="btn small" id="submit-button">
+                        </div>
+                        
+                    </form>
+                </div>
+                
+                <div class="col-md-2"></div>
+                
+            </div>
+        </div>
+        
+        <!-- Shopping cart trigger modal -->
+        <img src="images/cart-logo.png" id="logo" data-toggle="modal" data-target="#shoppingModal">
+
+        <!-- Shopping cart modal -->
+        <div class="modal fade" id="shoppingModal" tabindex="-1" role="dialog" aria-labelledby="shoppingeModalCenterTitle" aria-hidden="true">
+            
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                
+                <div class="modal-content">
+                    <!-- cart title -->
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="shoppingModalLongTitle">Shopping Cart</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <!-- cart items -->
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <img src="images/placeholder.png" height="100px"></div>
+                                    <div class="col-sm-7">
+                                        <strong>Product Name</strong>
+                                        <p class="lead">
+                                            <small class="text-muted">
+                                                Delete    
+                                            </small>
+                                            <small class="text-muted" style="margin-left:10px;">
+                                                Qty: <span id="product-1-quantity">1</span>   
+                                            </small></p>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <strong><span id="product-1-cost">$25.99</span></strong>            
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <img src="images/placeholder.png" height="100px"></div>
+                                    <div class="col-sm-7">
+                                        <strong>Product Name</strong>
+                                        <p class="lead">
+                                            <small class="text-muted">
+                                                Delete    
+                                            </small>
+                                            <small class="text-muted" style="margin-left:10px;">
+                                                Qty: <span id="product-2-quantity">4</span>   
+                                            </small></p>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <strong><span id="product-2-cost">$65.99</span></strong>     
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <img src="images/placeholder.png" height="100px"></div>
+                                    <div class="col-sm-7">
+                                        <strong>Product Name</strong>
+                                        <p class="lead">
+                                            <small class="text-muted">
+                                                Delete    
+                                            </small>
+                                            <small class="text-muted" style="margin-left:10px;">
+                                                Qty: <span id="product-3-quantity">2</span>   
+                                            </small></p>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <strong><span id="product-3-cost">$38.99</span></strong>            
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- cart foter -->
+                    <div class="modal-footer">
+                        <button class="btn btn-primary btn-lg btn-block">Checkout - <span id="total-cost">$130.97</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+        <script type="text/javascript">
+            
+            // function to highlight cart logo when user hovers over it
+            $('#logo').hover(
+                function() {
+                    $(this).attr('src','images/cart-logo-muted.png');
+                }, function() {
+                    $(this).attr('src','images/cart-logo.png');
+                }
+            );
+            
+            /*
+              function to alert user of success in submitting form or error if an input wasn't 
+              completed
+              
+              note: form doesn't submit on the backend; a small tweaks with php can be integrated to 
+              submit form. 
+            */
+            $('#submit-button').click(function() {
+                
+                var successMessage = ""; //used to alert only if form was successful
+                var errorMessage = "<strong>There were error(s) in your form:</strong><br>"; //used to alert errors
+                var errorStatus = false; //determines whether there was an error in the form
+
+                $(".alert").alert(); //trigger to display alert
+                
+                if($("#name").val() == ""){
+                    errorMessage += "Your name is required<br>";
+                    errorStatus = true;
+                }
+                
+                if($("#problem").val() == ""){
+                    errorMessage += "Please tell us what you want to speak about<br>";
+                    errorStatus = true;
+                }
+
+                if(!isEmail($("#email").val())){
+                    errorMessage += "Your email address is not valid.<br>";  
+                    errorStatus = true;
+                }
+
+                else if($("#email").val() == ""){
+                    errorMessage += "The email field is required.<br>"
+                    errorStatus = true;
+                }
+                
+                if($("#alternative").val() == ""){
+                    errorMessage += "Please give us an alternative way to reach you<br>";
+                    errorStatus = true;
+                }
+                
+                if($("#money").val() == ""){
+                    errorMessage += "Please tell us your budget<br>";
+                    errorStatus = true;
+                }
+                
+                //alert error
+                if(errorStatus){
+                    $("#alert").html("<div class=\"alert alert-danger\" role=\"alert\">"+errorMessage+"</div>");
+                }
+                
+                //alert success
+                else {
+                    //function grabs the person's first name
+                    var name = $("#name").val();
+                    var firstName = name;
+                    if (name.indexOf(' ') >= 0)
+                        {
+                            firstName = name.substr(0,name.indexOf(" "));
+                        }  
+                    successMessage = "Hey, " + firstName +"!" + " Your message was received. We will get back to you as soon as possible!"
+                    $("#alert").html("<div class=\"alert alert-success\" role=\"alert\">"+successMessage+"</div>");
+                }
+                
+            return false; //prevents form from submitting; php needed 
+            
+            });
+        
+            //used to determine if email is correctly spelled.
+           function isEmail(email) {
+                var regex = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
+                return regex.test(email);
+            }
+        </script>
+    </body>
+</html>
