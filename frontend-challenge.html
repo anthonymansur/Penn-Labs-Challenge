@@ -52,6 +52,20 @@
                 cursor: pointer;
             }
             
+            .delete {
+                background: none !important;
+                color: inherit;
+                border: none;
+                padding: 0! important;
+                font: inherit;
+                cursor: pointer;
+                outline: inherit !important;
+            }
+            
+            .delete:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
         </style>
         
     </head>
@@ -206,7 +220,7 @@
                     <div class="modal-body">
                         <!-- cart items -->
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
+                            <li class="list-group-item" id="product-1">
                                 <div class="row">
                                     <div class="col-sm-3">
                                         <img src="images/placeholder.png" height="100px"></div>
@@ -214,18 +228,28 @@
                                         <strong>Product Name</strong>
                                         <p class="lead">
                                             <small class="text-muted">
-                                                Delete    
+                                                <button class="delete">Delete</button>    
                                             </small>
                                             <small class="text-muted" style="margin-left:10px;">
-                                                Qty: <span id="product-1-quantity">1</span>   
+                                                Qty: 
+                                                <select id="product-1-quantity">
+                                                  <option value="1">1</option>
+                                                  <option value="2">2</option>
+                                                  <option value="3">3</option>
+                                                  <option value="4">4</option>
+                                                  <option value="5">5</option>
+                                                  <option value="6">6</option>
+                                                  <option value="7">7</option>
+                                                  <option value="8">8</option>
+                                                </select>                                                
                                             </small></p>
                                     </div>
                                     <div class="col-sm-2">
-                                        <strong><span id="product-1-cost">$25.99</span></strong>            
+                                        <strong>$<span id="product-1-cost"></span></strong>            
                                     </div>
                                 </div>
                             </li>
-                            <li class="list-group-item">
+                            <li class="list-group-item" id="product-2">
                                 <div class="row">
                                     <div class="col-sm-3">
                                         <img src="images/placeholder.png" height="100px"></div>
@@ -233,18 +257,28 @@
                                         <strong>Product Name</strong>
                                         <p class="lead">
                                             <small class="text-muted">
-                                                Delete    
+                                                <button class="delete">Delete</button>    
                                             </small>
                                             <small class="text-muted" style="margin-left:10px;">
-                                                Qty: <span id="product-2-quantity">4</span>   
+                                                Qty: 
+                                                <select id="product-2-quantity">
+                                                  <option value="1">1</option>
+                                                  <option value="2">2</option>
+                                                  <option value="3">3</option>
+                                                  <option value="4">4</option>
+                                                  <option value="5">5</option>
+                                                  <option value="6">6</option>
+                                                  <option value="7">7</option>
+                                                  <option value="8">8</option>
+                                                </select>
                                             </small></p>
                                     </div>
                                     <div class="col-sm-2">
-                                        <strong><span id="product-2-cost">$65.99</span></strong>     
+                                        <strong>$<span id="product-2-cost"></span></strong>     
                                     </div>
                                 </div>
                             </li>
-                            <li class="list-group-item">
+                            <li class="list-group-item" id="product-3">
                                 <div class="row">
                                     <div class="col-sm-3">
                                         <img src="images/placeholder.png" height="100px"></div>
@@ -252,14 +286,24 @@
                                         <strong>Product Name</strong>
                                         <p class="lead">
                                             <small class="text-muted">
-                                                Delete    
-                                            </small>
+                                                <button class="delete">Delete</button>    
+                                            </small> 
                                             <small class="text-muted" style="margin-left:10px;">
-                                                Qty: <span id="product-3-quantity">2</span>   
+                                                Qty: 
+                                                <select id="product-3-quantity">
+                                                  <option value="1">1</option>
+                                                  <option value="2">2</option>
+                                                  <option value="3">3</option>
+                                                  <option value="4">4</option>
+                                                  <option value="5">5</option>
+                                                  <option value="6">6</option>
+                                                  <option value="7">7</option>
+                                                  <option value="8">8</option>
+                                                </select>
                                             </small></p>
                                     </div>
                                     <div class="col-sm-2">
-                                        <strong><span id="product-3-cost">$38.99</span></strong>            
+                                        <strong>$<span id="product-3-cost"></span></strong>            
                                     </div>
                                 </div>
                             </li>
@@ -267,7 +311,7 @@
                     </div>
                     <!-- cart foter -->
                     <div class="modal-footer">
-                        <button class="btn btn-primary btn-lg btn-block">Checkout - <span id="total-cost">$130.97</span></button>
+                        <button class="btn btn-primary btn-lg btn-block">Checkout - $<span id="total-cost"></span></button>
                     </div>
                 </div>
             </div>
@@ -281,6 +325,27 @@
         
         <script type="text/javascript">
             
+            //product costs
+            var productOneCost = 25.99;
+            var productTwoCost = 19.99;
+            var productThreeCost = 15.99;
+            
+            //set cart when page is loaded
+            $(function() {
+                var productOneTotalCost = (($("#product-1-quantity").val())*productOneCost).toFixed(2);
+                $("#product-1-cost").text(productOneTotalCost);
+                
+                var productTwoTotalCost = (($("#product-2-quantity").val())*productTwoCost).toFixed(2);
+                $("#product-2-cost").text(productTwoTotalCost);
+                
+                var productThreeTotalCost = (($("#product-3-quantity").val())*productThreeCost).toFixed(2);
+                $("#product-3-cost").text(productThreeTotalCost);
+                
+                var totalCost = parseFloat(productOneTotalCost)+ parseFloat(productTwoTotalCost) + parseFloat(productThreeTotalCost);
+                totalCost = totalCost.toFixed(2);
+                $("#total-cost").text(totalCost);
+            });
+            
             // function to highlight cart logo when user hovers over it
             $('#logo').hover(
                 function() {
@@ -289,6 +354,45 @@
                     $(this).attr('src','images/cart-logo.png');
                 }
             );
+            
+            //updates cart price
+            $('select').on('change', function() {
+                reload_cart();
+
+            });
+            
+            //updates cart when item removed
+            $('.delete').click(function() {
+                if ($('#product-1').is(":hover")){
+                    $('#product-1').css("display","none");
+                    productOneCost = 0;
+                    reload_cart();
+                } else if ($('#product-2').is(":hover")){
+                    $('#product-2').css("display","none");
+                    productTwoCost = 0;
+                    reload_cart();
+                } else {
+                    $('#product-3').css("display","none");
+                    productThreeCost = 0;
+                    reload_cart();
+                }
+            });
+            
+            //function to reload cart
+            function reload_cart() {
+                var productOneTotalCost = (($("#product-1-quantity").val())*productOneCost).toFixed(2);
+                $("#product-1-cost").text(productOneTotalCost);
+                
+                var productTwoTotalCost = (($("#product-2-quantity").val())*productTwoCost).toFixed(2);
+                $("#product-2-cost").text(productTwoTotalCost);
+                
+                var productThreeTotalCost = (($("#product-3-quantity").val())*productThreeCost).toFixed(2);
+                $("#product-3-cost").text(productThreeTotalCost);
+                
+                var totalCost = parseFloat(productOneTotalCost)+ parseFloat(productTwoTotalCost) + parseFloat(productThreeTotalCost);
+                totalCost = totalCost.toFixed(2);
+                $("#total-cost").text(totalCost);
+            }
             
             /*
               function to alert user of success in submitting form or error if an input wasn't 
